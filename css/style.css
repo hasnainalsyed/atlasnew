@@ -78,10 +78,6 @@ html, body {
   font-weight: normal;
   background-color: #000000;
   overflow-x: hidden;
-  /* background-image: url('/img/main-bg.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; */
 }
 
 ::-webkit-scrollbar {
@@ -359,7 +355,6 @@ body .navbar .navbar-brand span {
 
 .hero-section {
   background: linear-gradient(115.78deg, #000000 2.14%, rgba(0, 0, 0, 0) 46.94%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 36.96%), url('../img/top-banner.png');
-  /* background-image: url('/img/hero-bg.svg'); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -663,7 +658,7 @@ body .navbar .navbar-brand span {
 }
 
 .faqs .accordion-item .accordion-button::after {
-  background-image: url('/img/icons/arrow-down.svg');
+  background-image: url('../img/icons/arrow-down.svg');
   filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(325deg) brightness(115%) contrast(103%);
 }
 .faqs .accordion-item .accordion-button:not(.collapsed)::after {
