@@ -100,19 +100,24 @@ html, body {
   padding-right: 40px;
 }
 
+.bg-ellipse {
+  z-index: 1;
+}
+
 .bg-ellipse::after {
   content: '';
   position: absolute;
   background: rgba(39, 88, 255, 0.45);
-  filter: blur(500px);
+  filter: blur(200px);
   height: 1025px;
   width: 1025px;
   display: block;
   overflow: hidden;
   border-radius: 100%;
+  z-index: -1;
 }
 .bg-ellipse.bg-ellipse_1::after {
-  right: -10%;
+  right: 0;
   top: -60%;
   height: 712px;
   width: 712px;
@@ -123,6 +128,7 @@ html, body {
   top: 0;
 }
 .bg-ellipse.bg-ellipse_3::after {
+  max-width: 100%;
   top: 0;
   right: 50%;
   transform: translate(50%, 40%);
@@ -142,14 +148,22 @@ html, body {
   padding: 14px 21px 15px;
   background-color: var(--c_blue);
   border: 1px solid var(--c_blue);
+  transition: all 0.45s ease;
 }
 .btn-blue:hover {
   color: var(--c_white);
   border-color: var(--c_blue_2);
   background-color: var(--c_blue_2);
+  box-shadow: 0 0 5px var(--c_blue_2),
+              0 0 25px var(--c_blue_2),
+              0 0 50px var(--c_blue_2),
+              0 0 200px var(--c_blue_2);
 }
 .btn-blue:focus {
-  box-shadow: 0 0 0 0.25rem rgb(39 88 255 / 50%);
+  box-shadow: 0 0 5px var(--c_blue_2),
+              0 0 25px var(--c_blue_2),
+              0 0 50px var(--c_blue_2),
+              0 0 200px var(--c_blue_2);
 }
 .btn-green {
   font-family: var(--f_gilroy_medium);
@@ -162,14 +176,22 @@ html, body {
   padding: 14px 21px 15px;
   background-color: var(--c_green);
   border: 1px solid var(--c_green);
+  transition: all 0.45s ease;
 }
 .btn-green:hover {
   color: var(--c_black);
   border-color: var(--c_green_2);
   background-color: var(--c_green_2);
+  box-shadow: 0 0 5px var(--c_green_2),
+              0 0 25px var(--c_green_2),
+              0 0 50px var(--c_green_2),
+              0 0 200px var(--c_green_2);
 }
 .btn-green:focus {
-  box-shadow: 0 0 0 0.25rem rgb(150, 244, 168 / 50%);
+  box-shadow: 0 0 5px var(--c_green_2),
+              0 0 25px var(--c_green_2),
+              0 0 50px var(--c_green_2),
+              0 0 200px var(--c_green_2);
 }
 
 .btn-border {
@@ -183,14 +205,22 @@ html, body {
   padding: 14px 21px 15px;
   background-color: transparent;
   border: 1px solid var(--c_blue);
+  transition: all 0.45s ease;
 }
 .btn-border:hover {
   color: var(--c_white);
   background-color: var(--c_blue);
   border: 1px solid var(--c_blue);
+  box-shadow: 0 0 5px var(--c_blue),
+              0 0 25px var(--c_blue),
+              0 0 50px var(--c_blue),
+              0 0 200px var(--c_blue);
 }
 .btn-border:focus {
-  box-shadow: 0 0 0 0.25rem rgb(39 88 255 / 50%);
+  box-shadow: 0 0 5px var(--c_blue),
+              0 0 25px var(--c_blue),
+              0 0 50px var(--c_blue),
+              0 0 200px var(--c_blue);
 }
 
 h3.simple-heading {
@@ -374,15 +404,26 @@ body .navbar .navbar-brand span {
 }
 
 .hero-section .box {
+  position: relative;
+  padding: 33px 30px;
+  z-index: 1;
+  max-width: 350px;
+  flex: 0 0 350px;
+}
+
+.hero-section .box::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
   background: rgba(8, 21, 37, 0.25);
   box-shadow: 0px 4px 180px var(--c_blue);
   filter: drop-shadow(0px 4px 180px var(--c_blue));
   backdrop-filter: blur(25px);
   border-radius: 16px;
-  /* Note: backdrop-filter has minimal browser support */
-  padding: 33px 30px;
-  max-width: 350px;
-  flex: 0 0 350px;
 }
 
 .hero-section .box h3 {
@@ -404,6 +445,30 @@ body .navbar .navbar-brand span {
   line-height: 1;
   letter-spacing: var(--l_space_005);
   color: var(--c_white);
+}
+
+.slick-dots {
+  bottom: 25%;
+}
+
+.slick-dots li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots li button:before {
+  color: var(--c_blue);
+  opacity: 0.25;
+  font-size: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: var(--c_blue);
 }
 
 .system {
@@ -443,6 +508,7 @@ body .navbar .navbar-brand span {
   border-radius: 32px;
   position: relative;
   left: -25px;
+  max-width: 110%;
 }
 
 .desktop {
@@ -466,6 +532,7 @@ body .navbar .navbar-brand span {
   border-radius: 32px;
   left: -20px;
   position: relative;
+  max-width: 110%;
 }
 
 .green-blocks {
@@ -551,6 +618,10 @@ body .navbar .navbar-brand span {
   padding: 0 60px;
 }
 
+.half-n-half .block .text-block img {
+  margin-bottom: 15px;
+}
+
 .half-n-half .block .text-block h3 {
   font-family: var(--f_gilroy_semiBold);
   font-style: normal;
@@ -621,7 +692,10 @@ body .navbar .navbar-brand span {
 
 footer {
   max-width: 100%;
-  margin: 0 40px;
+  padding: 0 40px;
+}
+
+footer .container-xxl {
   border-top: 1px solid var(--c_blue);
 }
 
@@ -629,7 +703,7 @@ footer .row:first-child {
   padding: 100px 0 50px;
 }
 footer .row:last-child {
-  padding: 0 0 100px;
+  padding: 0 0 80px;
 }
 
 .footer-logo {
@@ -667,7 +741,7 @@ footer .list-unstyled li a {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: var(--l_space_002);
   text-transform: capitalize;
   color: var(--c_white);
@@ -696,9 +770,253 @@ footer .copyright {
   color: var(--c_white);
 }
 
+footer .last-list > li a {
+  padding: .5rem 1rem;
+}
+
+footer .last-list > li:first-child::after {
+  content: '\25cf';
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 2.5;
+  transform: translateX(50%);
+  color: var(--c_white);
+}
+
 
 /*-------------------------------
 |                              
 |      Homepage Style End      
 |                              
 -------------------------------*/
+/*!===================================================*/
+/*-------------------------------
+|                              
+|     MEDIA QURIES START       
+|                              
+-------------------------------*/
+@media only screen and (max-width: 1440px) {
+
+  h2.heading,
+  .system .number,
+  .hero-section h2,
+  .half-n-half .block .heading {
+    font-size: 56px;
+  }
+
+  h3.simple-heading,
+  .hero-section .box h3 {
+    font-size: 40px;
+  }
+
+  .half-n-half .block .text-block h3 {
+    font-size: 30px;
+  }
+
+  .big-text,
+  .half-n-half .block .simple-text {
+    font-size: 20px;
+  }
+
+  .system .fixed,
+  .half-n-half .block .sub-heading,
+  .half-n-half .block .buttons-block p {
+    font-size: 18px;
+  }
+
+  .faqs .accordion-item .accordion-button {
+    padding: 30px 0;
+  }
+
+  .faqs h2.heading {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .hero-section .content {
+    margin-bottom: 50vh;
+  }
+
+  footer,
+  .container-xl,
+  .container-xxl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  footer .container-xxl {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  footer .footer-heading {
+    margin-bottom: 30px;
+  }
+
+  .hero-section .box {
+    max-width: calc(100% / 3 - 30px);
+    flex: 0 0 calc(100% / 3 - 30px);
+  }
+
+  .half-n-half .block {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+
+  h2.heading, .system .number, .hero-section h2, .half-n-half .block .heading {
+    font-size: 50px;
+  }
+
+  h3.simple-heading, .hero-section .box h3 {
+    font-size: 30px;
+  }
+
+  .half-n-half .block .text-block h3 {
+    font-size: 24px;
+  }
+
+  .big-text, .half-n-half .block .simple-text {
+    font-size: 17px;
+  }
+
+  .hero-section {
+    padding-top: 60px;
+  }
+
+  .navbar .navbar-toggler {
+    height: 25px;
+  }
+  
+  .navbar .navbar-toggler-item {
+    height: 2px;
+    width: 20px;
+    background-color: var(--c_blue);
+  }
+  .navbar .navbar-toggler-item:first-child {
+    width: 18px;
+  }
+  .navbar .navbar-toggler-item:last-child {
+    width: 16px;
+  }
+  
+  .navbar .navbar-collapse {
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid var(--c_blue);
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 0 5px var(--c_blue_2),
+              0 0 25px var(--c_blue_2),
+              0 0 50px var(--c_blue_2),
+              0 0 200px var(--c_blue_2);
+  }
+
+  .system {
+    padding-bottom: 0;
+  }
+
+  .half-n-half .block .text-block {
+    padding: 0 40px;
+  }
+
+  .faqs {
+    padding: 100px 0;
+  }
+
+  .faqs .faqs-inner {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .system .number {
+    font-size: 48px;
+  }
+
+  h2.heading, .hero-section h2, .half-n-half .block .heading {
+    font-size: 36px;
+  }
+
+  h3.simple-heading, .hero-section .box h3 {
+    font-size: 28px;
+  }
+
+  .half-n-half .block .buttons-block p,
+  .big-text, .half-n-half .block .simple-text {
+    font-size: 16px;
+  }
+
+  .system .fixed,
+  .half-n-half .block .sub-heading {
+    font-size: 15px;
+  }
+
+  .hero-section {
+    background: linear-gradient(115.78deg, #000000 2.14%, rgba(0, 0, 0, 0) 46.94%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 36.96%), url('/img/top-banner-mbl.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .hero-section .content {
+    margin-bottom: 0;
+  }
+
+  .hero-section .content .d-flex {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-section .content .d-flex .btn {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-section .boxes {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .hero-section .boxes .box::after {
+    background: rgba(8, 21, 37, 0.45);
+    filter: drop-shadow(0px 4px 180px var(--c_blue));
+    box-shadow: 4px 100px rgba(39, 88, 255, 0.6);
+    backdrop-filter: blur(25px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 8px;
+  }
+  
+  .hero-section .boxes .slick-track {
+    padding: 200px 0;
+  }
+
+  .faqs .accordion-body,
+  .half-n-half .block .simple-text {
+    max-width: 100%;
+  }
+
+  .half-n-half .block .buttons-block {
+    margin-bottom: 30px;
+  }
+
+  .half-n-half .block.block-green {
+    margin-top: 50px;
+  }
+
+  .faqs .btn-border,
+  footer .btn-border {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/*-------------------------------
+|                              
+|       MEDIA QURIES END       
+|                              
+---------------------------------

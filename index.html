@@ -10,6 +10,10 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="css/slick/slick.css">
+  <link rel="stylesheet" href="css/slick/slick-theme.css">
+
   <!-- Style CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,10 +23,12 @@
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg position-absolute w-100">
     <div class="container-xxl">
-      <a class="navbar-brand d-flex align-items-center" href="#"><img src="img/logo.svg" alt="Atlas Protocol"><span class="ms-3">ATLAS FINANCE</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <a class="navbar-brand d-flex align-items-center" href="/"><img src="img/logo.svg" alt="Atlas Protocol"><span class="ms-3">ATLAS FINANCE</span></a>
+      <button class="navbar-toggler d-flex align-items-end flex-column justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-item"></span>
+        <span class="navbar-toggler-item"></span>
+        <span class="navbar-toggler-item"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- <ul class="navbar-nav me-auto my-4">
@@ -85,10 +91,10 @@
         <div class="row">
           <div class="col-12">
             <div class="content mt-5">
-              <h2>A better, smarter <br> revolution for the <br> use of <span>DeFi</span></h2>
-              <div class="d-flex align-items-center mt-5">
-                <a href="#" class="btn btn-blue rounded-pill">Launch app</a>
-                <a href="#" class="btn btn-border ms-4 rounded-pill">Learn more</a>
+              <h2 class="text-center text-md-start">A better, smarter <br class="d-none d-md-block"> revolution for the <br class="d-none d-md-block"> use of <span>DeFi</span></h2>
+              <div class="d-flex align-items-center flex-column flex-md-row justify-content-between justify-content-md-start mt-5">
+                <a href="#" id="launchApp" class="btn btn-blue rounded-pill mb-3 mb-md-0">Launch app</a>
+                <a href="#" class="btn btn-border ms-0 ms-md-4 rounded-pill">Learn more</a>
               </div>
             </div>
           </div>
@@ -115,7 +121,7 @@
   <!-- Simple Text Section Start -->
   <section id="system">
     <div class="system">
-      <div class="container mx-auto px-5">
+      <div class="container mx-auto px-2 px-md-5">
         <div class="row">
           <div class="col-12">
             <h3 class="simple-heading text-center mb-4">A simple <br> buy-hold-earn System</h3>
@@ -132,7 +138,8 @@
         </div>
       </div>
       <div class="tesxt">
-        <img src="img/tesxt.svg" alt="circle" class="img-fluid">
+        <img src="img/tesxt.svg" alt="circle" class="img-fluid d-none d-md-block">
+        <img src="img/tesxt-mb.svg" alt="circle" class="img-fluid d-block d-md-none w-100 mx-auto">
       </div>
     </div>
   </section>
@@ -144,13 +151,13 @@
       <div class="container-xl">
         <div class="row">
           <div class="col-12 col-md-6">
-            <div class="block block-blue">
+            <div class="block block-blue text-center text-md-start">
               <p class="sub-heading">ATLAS Launchpad</p>
               <h3 class="heading">$100,000</h3>
               <p class="simple-text">Early project funding & backing, holders gain a percentage stake within
                 investments.</p>
-              <div class="buttons-block d-flex align-items-center">
-                <a href="#" class="btn btn-blue me-4 rounded-pill">Buy wow</a>
+              <div class="buttons-block d-flex flex-column flex-md-row align-items-center">
+                <a href="#" class="btn btn-blue me-0 me-md-4 mb-3 mb-md-0 rounded-pill">Buy wow</a>
                 <p class="mb-0">Try your luck!</p>
               </div>
               <div class="position-relative pt-2">
@@ -168,13 +175,13 @@
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <div class="block block-green">
+            <div class="block block-green text-center text-md-start">
               <p class="sub-heading">ATLAS DEX Offerings</p>
               <h3 class="heading">80+ Projects</h3>
               <p class="simple-text">Integrated with launchpad projects & high potential tokens. $ATLAS holders get
                 preferential rates.</p>
-              <div class="buttons-block d-flex align-items-center">
-                <a href="#" class="btn btn-green me-4 rounded-pill">Play now</a>
+              <div class="buttons-block d-flex flex-column flex-md-row align-items-center">
+                <a href="#" class="btn btn-green me-0 me-md-4 mb-3 mb-md-0 rounded-pill">Play now</a>
                 <p class="mb-0">Win by saving</p>
               </div>
               <div class="position-relative pt-2">
@@ -201,8 +208,8 @@
   <section id="faqs">
     <div class="faqs position-relative bg-ellipse bg-ellipse_2">
       <div class="container-xl">
-        <div class="row">
-          <div class="col-12 col-md-6">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
             <h2 class="heading my-4">Still got Question ?</h2>
             <div class="faqs-inner">
               <div class="accordion" id="accordionExample">
@@ -270,7 +277,7 @@
             </div>
             <a href="#" class="btn btn-border rounded-pill mt-5">See more details</a>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-lg-6 d-none d-lg-block">
             <img src="img/faqs-img.svg" alt="FAQ's" class="img-fluid">
           </div>
         </div>
@@ -280,16 +287,16 @@
   <!-- FAQ's End -->
 
   <!-- Footer Start -->
-  <footer>
-    <div class="container-xxl position-relative bg-ellipse bg-ellipse_3">
+  <footer class="position-relative bg-ellipse bg-ellipse_3">
+    <div class="container-xxl">
       <div class="row">
-        <div class="col-sm-2">
-          <a href="/" class="footer-logo d-flex flex-column justify-content-center align-items-start">
-            <img src="img/logo.svg" alt="Atlas Protocol" class="img-fluid mb-4">
+        <div class="col-12 col-xl-2 mb-5 mb-xl-0 text-center text-xl-start">
+          <a href="/" class="footer-logo d-flex flex-column justify-content-center align-items-center align-items-xl-start">
+            <img src="img/logo.svg" alt="Atlas Protocol" class="img-fluid mb-xl-4 mb-3">
             <span>Atlas Finance</span>
           </a>
         </div>
-        <div class="col-sm-2">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-5 mb-md-0">
           <h4 class="footer-heading">Company</h4>
           <ul class="d-flex flex-column list-unstyled">
             <li class="list-item"><a href="#" class="nav-link">Home</a></li>
@@ -299,7 +306,7 @@
             <li class="list-item"><a href="#" class="nav-link">Contact</a></li>
           </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-5 mb-md-0">
           <h4 class="footer-heading">My Account</h4>
           <ul class="d-flex flex-column list-unstyled">
             <li class="list-item"><a href="#" class="nav-link">Profile</a></li>
@@ -309,7 +316,7 @@
             <li class="list-item"><a href="#" class="nav-link">Settings</a></li>
           </ul>
         </div>
-        <div class="col-sm-2">
+        <div class="col-12 col-md-4 col-lg-3 col-xl-2">
           <h4 class="footer-heading">Resources</h4>
           <ul class="d-flex flex-column list-unstyled">
             <li class="list-item"><a href="#" class="nav-link">Help center</a></li>
@@ -320,9 +327,9 @@
             <li class="list-item"><a href="#" class="nav-link">Newsletter</a></li>
           </ul>
         </div>
-        <div class="col col-sm-4">
+        <div class="col-12 col-lg-3 mt-5 mt-lg-0">
           <h4 class="footer-heading">Stay in loop</h4>
-          <ul class="d-flex flex-row list-unstyled">
+          <ul class="d-flex flex-row list-unstyled mb-2">
             <li class="list-item"><a href="#" class="nav-link"><img src="img/icons/facebook.svg" alt="facebook"
                   class="img-fluid"></a></li>
             <li class="list-item"><a href="#" class="nav-link"><img src="img/icons/insta.svg" alt="insta"
@@ -338,12 +345,12 @@
         </div>
       </div>
       <div class="row justify-content-between align-items-center">
-        <div class="col align-content-center">
+        <div class="col-12 col-md-6 align-content-center">
           <p class="copyright mb-0">&copy; 2022 ATLAS Protocol, All rights reserved.</p>
         </div>
-        <div class="col">
-          <ul class="d-flex flex-row list-unstyled justify-content-end">
-            <li class="list-item"><a href="#" class="nav-link">Disclaimer</a></li>
+        <div class="col-12 col-md-6">
+          <ul class="d-flex flex-row list-unstyled justify-content-center justify-content-md-end last-list">
+            <li class="list-item position-relative"><a href="#" class="nav-link">Disclaimer</a></li>
             <li class="list-item"><a href="#" class="nav-link">Terms of use</a></li>
           </ul>
         </div>
@@ -357,6 +364,9 @@
 
   <!-- Bootstrap JS -->
   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- Slick JS -->
+  <script src="js/slick/slick.min.js"></script>
 
   <!-- Custom JS -->
   <script src="js/scripts.js"></script>

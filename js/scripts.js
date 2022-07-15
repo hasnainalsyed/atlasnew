@@ -26,3 +26,24 @@ $(window).scroll(function () {
     }
   });
 });
+
+jQuery(function () {
+  // Slick JS Start
+  if(window.innerWidth < 768) {
+    jQuery('.boxes').slick({
+      infinite: true,
+      dots: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    })
+  }
+  // Slick JS End
+
+  let launchApp = document.getElementById('launchApp');
+  // ✅ Change button text on click
+  launchApp.addEventListener('click', function handleClick() {
+    launchApp.innerText = 'Comming Soon';
+  });
+
+});
