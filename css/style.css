@@ -951,7 +951,7 @@ footer .last-list > li:first-child::after {
   }
 
   .hero-section {
-    background: linear-gradient(115.78deg, #000000 2.14%, rgba(0, 0, 0, 0) 46.94%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 36.96%), url('/img/top-banner-mbl.png');
+    background: linear-gradient(115.78deg, #000000 2.14%, rgba(0, 0, 0, 0) 46.94%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 36.96%), url('../img/top-banner-mbl.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
