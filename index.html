@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="css/slick/slick.css">
   <link rel="stylesheet" href="css/slick/slick-theme.css">
 
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="css/animate/animate.min.css">
+
   <!-- Style CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -90,7 +93,7 @@
       <div class="container-xxl">
         <div class="row">
           <div class="col-12">
-            <div class="content mt-5">
+            <div class="content wow animate__animated animate__fadeInUp mt-5">
               <h2 class="text-center text-md-start">A better, smarter <br class="d-none d-md-block"> revolution for the <br class="d-none d-md-block"> use of <span>DeFi</span></h2>
               <div class="d-flex align-items-center flex-column flex-md-row justify-content-between justify-content-md-start mt-5">
                 <a href="#" id="launchApp" class="btn btn-blue rounded-pill mb-3 mb-md-0">Launch app</a>
@@ -100,15 +103,15 @@
           </div>
         </div>
         <div class="row boxes justify-content-center">
-          <div class="box">
+          <div class="box wow animate__animated animate__fadeInUp">
             <h3>$10M</h3>
             <p>Circulating Supply</p>
           </div>
-          <div class="box">
+          <div class="box wow animate__animated animate__fadeInDown">
             <h3>82k</h3>
             <p>Holders</p>
           </div>
-          <div class="box">
+          <div class="box wow animate__animated animate__fadeInUp">
             <h3>$0.00025</h3>
             <p>ATLAS Price</p>
           </div>
@@ -123,7 +126,7 @@
     <div class="system">
       <div class="container mx-auto px-2 px-md-5">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 wow animate__animated animate__fadeInDown">
             <h3 class="simple-heading text-center mb-4">A simple <br> buy-hold-earn System</h3>
             <p class="big-text text-center mb-4">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
@@ -137,7 +140,7 @@
           </div>
         </div>
       </div>
-      <div class="tesxt">
+      <div class="tesxt wow animate__animated animate__fadeInUp">
         <img src="img/tesxt.svg" alt="circle" class="img-fluid d-none d-md-block">
         <img src="img/tesxt-mb.svg" alt="circle" class="img-fluid d-block d-md-none w-100 mx-auto">
       </div>
@@ -151,7 +154,7 @@
       <div class="container-xl">
         <div class="row">
           <div class="col-12 col-md-6">
-            <div class="block block-blue text-center text-md-start">
+            <div class="block block-blue text-center text-md-start wow animate__animated animate__fadeInUp">
               <p class="sub-heading">ATLAS Launchpad</p>
               <h3 class="heading">$100,000</h3>
               <p class="simple-text">Early project funding & backing, holders gain a percentage stake within
@@ -175,7 +178,7 @@
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <div class="block block-green text-center text-md-start">
+            <div class="block block-green text-center text-md-start wow animate__animated animate__backInDown">
               <p class="sub-heading">ATLAS DEX Offerings</p>
               <h3 class="heading">80+ Projects</h3>
               <p class="simple-text">Integrated with launchpad projects & high potential tokens. $ATLAS holders get
@@ -367,6 +370,10 @@
 
   <!-- Slick JS -->
   <script src="js/slick/slick.min.js"></script>
+  
+  <!-- WOW JS -->
+  <script src="js/wow/wow.min.js"></script>
+  <script>new WOW().init();</script>
 
   <!-- Custom JS -->
   <script src="js/scripts.js"></script>
